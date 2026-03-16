@@ -15,11 +15,10 @@ A simple HTTP web server that interacts with the GitHub API to fetch and display
 
 
 
-## 1. Clone and Setup
+## 1. Move inside project folder
 
 ```bash
-# clone the project and move to project directory
-git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git 
+
 cd equalexperts-assignment
 
 
