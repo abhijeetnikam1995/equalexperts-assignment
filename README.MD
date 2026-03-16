@@ -12,15 +12,10 @@ jq (optional, for pretty-printed JSON)
 
 🚀 Quick Start with Docker
 1. Clone and Setup
-bash
-# Create a project folder
-mkdir newenv
-cd newenv
+git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git
 
-# Copy the required files into newenv:
-# - app.py
-# - test_it.py
-# - Dockerfile
+move into the folder "equalexperts-assignment"
+
 2. Build the Docker Image
 bash
 docker build -t gist-api .
