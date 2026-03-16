@@ -1,75 +1,106 @@
-Gist API Server
-A simple HTTP web server that interacts with the GitHub API to fetch and display a user's public gists. Built with Flask and containerized with Docker.
+# Gist API Server
 
-📋 Prerequisites
-Docker installed on your system
+A simple HTTP web server that interacts with the GitHub API to fetch and display a user's public gists. Built with **Flask** and containerized with **Docker**.
 
-Python 3.9+ (for local development)
+---
 
-curl (for testing the API)
+# 📋 Prerequisites
 
-jq (optional, for pretty-printed JSON)
+* Docker installed on your system
+* Python 3.9+ (for local development)
+* curl (for testing the API)
+* jq (optional, for pretty-printed JSON)
 
-🚀 Quick Start with Docker
-1. Clone and Setup
+---
 
+# 🚀 Quick Start with Docker
 
+## 1. Clone and Setup
 
-```git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git ```
+```bash
+# clone the project and move to project directory
+git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git 
+cd equalexperts-assignment
 
-move into the folder "equalexperts-assignment"
+# Copy the required files into newenv:
+# - app.py
+# - test_it.py
+# - Dockerfile
+```
 
-```cd equalexperts-assignment```
+---
 
-2. Build the Docker Image
+## 2. Build the Docker Image
 
-```docker build -t gist-api .```
+```bash
+docker build -t gist-api .
+```
 
-3. Run the Container
+---
 
-```docker run -d \
+## 3. Run the Container
+
+```bash
+docker run -d \
   --name gist-api \
   -p 8080:8080 \
   --restart unless-stopped \
-  gist-api```
+  gist-api
+```
 
-4. Verify it's Running
+---
+
+## 4. Verify it's Running
+
+```bash
 # Check if container is running
-
-```docker ps```
+docker ps
 
 # View container logs
-```docker logs gist-api```
-5. Test the API
+docker logs gist-api
+```
 
+---
+
+## 5. Test the API
+
+```bash
 # Basic test with curl
-```curl http://localhost:8080/octocat```
+curl http://localhost:8080/octocat
 
 # Pretty-printed output (requires jq)
-```curl http://localhost:8080/octocat | jq .```
+curl http://localhost:8080/octocat | jq .
 
 # Test health endpoint
-```curl http://localhost:8080/health```
+curl http://localhost:8080/health
 
 # Test error handling (non-existent user)
-```curl http://localhost:8080/nonexistentuser```
-🧪 Testing
-Using the Test Script
+curl http://localhost:8080/nonexistentuser
+```
 
+---
+
+# 🧪 Testing
+
+## Using the Test Script
+
+```bash
 # Create and activate a virtual environment
-```python3 -m venv venv```
-
-```source venv/bin/activate```  # On Windows: venv\Scripts\activate
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 # Install test dependencies
-```pip install pytest requests```
+pip install pytest requests
 
 # Run the test script
-```python3 test_it.py```
+python3 test_it.py
+```
 
-Expected output:
+---
 
-text
+## Expected Output
+
+```text
 Waiting for API to be ready...
 ✅ Health check passed
 
@@ -81,8 +112,13 @@ Testing /octocat endpoint...
 
 Testing error handling...
 ✅ Correctly returned 404 for non-existent user
-Sample API Response
-json
+```
+
+---
+
+# 📦 Sample API Response
+
+```json
 {
   "username": "octocat",
   "gist_count": 8,
@@ -97,12 +133,17 @@ json
     }
   ]
 }
-📁 Project Structure
-text
-newenv/
-├── app.py          # Main Flask application
-├── test_it.py      # Test script
-├── Dockerfile      # Docker configuration
-├── requirements.txt # Python dependencies
-└── README.md       # This file
+```
 
+---
+
+# 📁 Project Structure
+
+```text
+newenv/
+├── app.py           # Main Flask application
+├── test_it.py       # Test script
+├── Dockerfile       # Docker configuration
+├── requirements.txt # Python dependencies
+└── README.md        # This file
+```
