@@ -18,22 +18,18 @@ jq (optional, for pretty-printed JSON)
 ```git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git ```
 
 move into the folder "equalexperts-assignment"
-
 ```cd equalexperts-assignment```
 
-
-
-
 2. Build the Docker Image
-
 ```docker build -t gist-api .```
-3. Run the Container
 
+3. Run the Container
 ```docker run -d \
   --name gist-api \
   -p 8080:8080 \
   --restart unless-stopped \
   gist-api```
+
 4. Verify it's Running
 # Check if container is running
 ```docker ps```
