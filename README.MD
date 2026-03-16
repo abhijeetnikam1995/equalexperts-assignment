@@ -25,47 +25,48 @@ move into the folder "equalexperts-assignment"
 
 
 2. Build the Docker Image
-bash
-docker build -t gist-api .
+
+```docker build -t gist-api .```
 3. Run the Container
-bash
-docker run -d \
+
+```docker run -d \
   --name gist-api \
   -p 8080:8080 \
   --restart unless-stopped \
-  gist-api
+  gist-api```
 4. Verify it's Running
-bash
 # Check if container is running
-docker ps
+```docker ps```
 
 # View container logs
-docker logs gist-api
+```docker logs gist-api```
 5. Test the API
-bash
+
 # Basic test with curl
-curl http://localhost:8080/octocat
+```curl http://localhost:8080/octocat```
 
 # Pretty-printed output (requires jq)
-curl http://localhost:8080/octocat | jq .
+```curl http://localhost:8080/octocat | jq .```
 
 # Test health endpoint
-curl http://localhost:8080/health
+```curl http://localhost:8080/health```
 
 # Test error handling (non-existent user)
-curl http://localhost:8080/nonexistentuser
+```curl http://localhost:8080/nonexistentuser```
 🧪 Testing
 Using the Test Script
-bash
+
 # Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+```python3 -m venv venv```
+
+```source venv/bin/activate```  # On Windows: venv\Scripts\activate
 
 # Install test dependencies
-pip install pytest requests
+```pip install pytest requests```
 
 # Run the test script
-python3 test_it.py
+```python3 test_it.py```
+
 Expected output:
 
 text
