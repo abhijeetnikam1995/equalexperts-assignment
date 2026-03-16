@@ -4,7 +4,7 @@ A simple HTTP web server that interacts with the GitHub API to fetch and display
 
 ---
 
-# 📋 Prerequisites
+#  Prerequisites
 
 * Docker installed on your system
 * Python 3.9+ (for local development)
@@ -80,7 +80,7 @@ curl http://localhost:8080/nonexistentuser
 
 ---
 
-# 🧪 Testing
+#  Testing
 
 ## Using the Test Script
 
@@ -116,7 +116,7 @@ Testing error handling...
 
 ---
 
-# 📦 Sample API Response
+#  Sample API Response
 
 ```json
 {
@@ -137,7 +137,7 @@ Testing error handling...
 
 ---
 
-# 📁 Project Structure
+#  Project Structure
 
 ```text
 newenv/
