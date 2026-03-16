@@ -13,7 +13,7 @@ A simple HTTP web server that interacts with the GitHub API to fetch and display
 
 ---
 
-# 🚀 Quick Start with Docker
+
 
 ## 1. Clone and Setup
 
