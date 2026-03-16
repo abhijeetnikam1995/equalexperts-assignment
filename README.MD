@@ -19,6 +19,7 @@ jq (optional, for pretty-printed JSON)
 
 move into the folder "equalexperts-assignment"
 
+```cd equalexperts-assignment```
 2. Build the Docker Image
 bash
 docker build -t gist-api .
