@@ -22,10 +22,7 @@ A simple HTTP web server that interacts with the GitHub API to fetch and display
 git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git 
 cd equalexperts-assignment
 
-# Copy the required files into newenv:
-# - app.py
-# - test_it.py
-# - Dockerfile
+
 ```
 
 ---
