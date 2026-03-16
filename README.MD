@@ -15,7 +15,7 @@ jq (optional, for pretty-printed JSON)
 
 
 
-```git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git
+```git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git ```
 
 move into the folder "equalexperts-assignment"
 
