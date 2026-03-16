@@ -12,6 +12,9 @@ jq (optional, for pretty-printed JSON)
 
 🚀 Quick Start with Docker
 1. Clone and Setup
+
+
+
 git clone https://github.com/abhijeetnikam1995/equalexperts-assignment.git
 
 move into the folder "equalexperts-assignment"
